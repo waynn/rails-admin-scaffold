@@ -106,7 +106,9 @@ module Admin
       end
 
       def parent_controller_class_name
-        options[:parent_controller].capitalize
+        options[:parent_controller][0] = options[:parent_controller][0].capitalize
+        
+        options[:parent_controller]
       end
 
       def prefixed_route_url
